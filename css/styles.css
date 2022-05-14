@@ -219,10 +219,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--logo-text-color);
     
 }
-.btn {
+/* .btn {
 display: inline-flex;
-    width: 200px;
-    height: 50px;
+    min-width: 200px;
+    padding: 10px 32px;
     border-radius: 4px;
     border: none;
 }
@@ -242,7 +242,7 @@ display: inline-flex;
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .text-btn:hover,
 .text-btn:focus {
@@ -787,6 +787,14 @@ transform: translateY(0);
     transform: translateY(0);
 }
 
+.portfolio-link:focus .portfolio-top-text {
+    transform: translateY(0);
+}
+
+.portfolio-card:focus .portfolio-top-text {
+    transform: translateY(0);
+}
+
 /* ------MODAL WINDOW--------- */
 
 .backdrop {
@@ -811,7 +819,6 @@ transform: translateY(0);
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 350ms;
-    /* margin-top:; */
     min-width: 528px;
     min-height: 581px;
     padding: 40px;
@@ -823,6 +830,7 @@ transform: translateY(0);
     border-radius: 4px;
 }
 
+
 .modal-icon {
     fill: var(--header-logo);
     transition-property: fill;
@@ -830,7 +838,8 @@ transform: translateY(0);
     transition-duration: 250ms;
 }
 
-.modal-icon:hover {
+.modal-icon:hover,
+.modal-icon:focus {
 fill:var(--acent-color);
 }
 
@@ -845,6 +854,7 @@ fill:var(--acent-color);
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    cursor: pointer;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -935,13 +945,19 @@ border-color:var(--acent-color);
 .modal-checkbox {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    margin-bottom: 30px;
     
 }
 
 .modal-check:checked + .checkbox-label span {
     border: none;
     background-color: var(--acent-color);
+}
+
+.modal-check:hover + .checkbox-label span,
+.modal-check:focus + .checkbox-label span {
+    color:var(--acent-color);
 }
 
 .modal-check:checked + .checkbox-label .check-icon {
@@ -955,7 +971,7 @@ border-color:var(--acent-color);
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
         color: #757575;
         
 }
@@ -964,9 +980,32 @@ border-color:var(--acent-color);
         color: var(--acent-color);
 }
 
+
 .modal-button {
-text-align: center;
-}
+        display: block;
+        margin: auto;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        min-width: 200px;
+        padding: 10px 32px;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 4px;
+        background-color: var(--acent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .modal-button:hover,
+    .modal-button:focus {
+        background-color: #188CE8;
+    }
+
 
 .modal-input-wrap {
     position: relative;
@@ -1006,6 +1045,7 @@ border-radius: 4px;
 /* Подпишитесь на рассылку */
 
 .subscribe {
+    /* display: flex; */
     margin-left: auto;
 }
 
@@ -1020,7 +1060,7 @@ border-radius: 4px;
 }
 
 .email-input {
-    display: flex;
+    /* display: flex; */
     width: 358px;
     height: 50px;
     padding-left: 16px;
@@ -1039,6 +1079,35 @@ border-radius: 4px;
         font-size: 16px;
         line-height: 1.25;
         color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-btn {
+    
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: inherit;
+            font-weight: 700;
+                font-size: 16px;
+                line-height: 1.88;
+                letter-spacing: 0.06em;
+                min-width: 200px;
+                padding: 10px 32px;
+                color: #FFFFFF;
+                border: none;
+                border-radius: 4px;
+                background-color: var(--acent-color);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                cursor: pointer;
+                transition-property: background-color;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+    background-color: #188CE8;
 }
 
 .icon-send {
